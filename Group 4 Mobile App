@@ -1,0 +1,646 @@
+DART PROGRAMMING 
+GROUP 4
+MEMBERS:
+1.IRADUKUNDA Isaac
+2.TUYIZERE Belyse
+3.NDIZEYE Japhet
+4.NSHIMIYIMANA Pascal
+5.ITAKANEZA GIKUNDIRO Rene
+6.NDACYAYISENGA Samuel
+
+Q22: Menu-Based Calculator Using Switch
+What is required?
+Create a calculator that uses a switch statement to perform four mathematical operations:
+1.	Addition (+)
+2.	Subtraction (-)
+3.	Multiplication (*)
+4.	Division (/)
+Dart Program
+solution
+
+void main() {
+
+  double num1 = 20;
+  double num2 = 10;
+
+  int choice = 1;
+
+  switch (choice) {
+
+    case 1:
+      print("Addition: ${num1 + num2}");
+      break;
+
+    case 2:
+      print("Subtraction: ${num1 - num2}");
+      break;
+
+    case 3:
+      print("Multiplication: ${num1 * num2}");
+      break;
+
+    case 4:
+      if (num2 != 0) {
+        print("Division: ${num1 / num2}");
+      } else {
+        print("Cannot divide by zero");
+      }
+      break;
+
+    default:
+      print("Invalid choice!");
+  }
+}
+Output:Addition: 30.0
+Explanation
+
+double num1 = 20; – Stores the first number.
+double num2 = 10; – Stores the second number.
+int choice = 1; – Stores the selected operation.
+switch(choice) – Checks the selected operation.
+case 1 – Performs addition.
+case 2 – Performs subtraction.
+case 3 – Performs multiplication.
+case 4 – Performs division.
+break – Stops the current case.
+default – Displays a message when the choice is invalid.
+Summary to remember
+Keyword	Meaning
+Switch            	-Checks the selected option
+Case	-Defines an option
+Break	-Stops a case
+Default	-Handles invalid choices
+
+Remember: We use switch when we have many choices.
+Q 23: Student Marks Management Using Loops
+What is required?
+Create a program that uses:
+•	List
+•	For loop
+•	For-in loop
+•	While loop
+•	Do-while loop
+•	If...else statement
+Start Dart Program
+
+void main() {
+
+  // 1. List of ten students marks
+
+  List<int> marks = [80, 65, 45, 90, 30, 70, 55, 40, 85, 60];
+			Print(marks);
+  // 2. For loop
+  print("Numbers from 1 to 10:");
+
+
+  for (int i = 1; i <= 10; i++) {
+    print(i);
+  }
+
+  // 3. For-in loop
+  print("Students' Marks:");
+
+  for (int mark in marks) {
+    print(mark);
+  }
+
+  // 4. While loop
+  print("While loop:");
+
+  int x = 1;
+
+  while (x <= 5) {
+    print(x);
+    x++;
+  }
+
+  // 5. Do-while loop
+  print("Do-while loop:");
+
+  int y = 1;
+
+  do {
+    print(y);
+    y++;
+  } while (y <= 5);
+
+  // 6. If...else
+  print("Student Performance:");
+
+  for (int mark in marks) {
+
+    if (mark >= 50) {
+      print("$mark: Passed");
+    } else {
+      print("$mark: Failed");
+    }
+
+  }
+}
+Explanation
+1. List
+List<int> marks = [80, 65, 45, 90, 30, 70, 55, 40, 85, 60];
+A List stores many numbers in one variable.
+2. For loop
+for (int i = 1; i <= 10; i++) {
+  print(i);
+}
+•	int i = 1 – Starting number.
+•	i <= 10 – Condition for the loop.
+•	i++ – Increases the number by 1.
+3. For-in loop
+for (int mark in marks) {
+  print(mark);
+}
+It goes through every item in a List.
+4. While loop
+while (x <= 5) {
+  print(x);
+  x++;
+}
+It repeats the instructions while the condition is true.
+5. Do-while loop
+do {
+  print(y);
+  y++;
+} while (y <= 5);
+It executes the instructions first and checks the condition afterward.
+6. If...else
+if (mark >= 50) {
+  print("Passed");
+} else {
+  print("Failed");
+}
+•	50 or above = Passed.
+•	Below 50 = Failed.
+summary to remember
+Loop	Main purpose
+for	-Repeats using a counter
+for-in	-Goes through List items
+while	-Repeats while the condition is true
+do-while	-Executes at least once
+if...else	-Makes decisions
+Remember: A loop repeats instructions many times.
+Q24: Mathematical and String Operations
+What is required?
+Create a Dart program that performs mathematical calculations and changes student names using String methods.
+Dart Program
+
+import 'dart:math';
+
+void main() {
+
+  // 1. Square root
+  print("Square root: ${sqrt(144)}");
+
+  // 2. Power
+  print("Power: ${pow(2, 4)}");
+
+  // 3. Maximum and Minimum
+  int num1 = 20;
+  int num2 = 10;
+
+  print("Maximum: ${max(num1, num2)}");
+  print("Minimum: ${min(num1, num2)}");
+
+  // 4. Student full name
+  String name = "  IRADUKUNDA isaac   ";
+
+  // 5. Remove unnecessary spaces
+  print("Trimmed name: ${name.trim()}");
+
+  // 6. Convert to uppercase
+  print("Uppercase: ${name.trim().toUpperCase()}");
+
+  // 7. Convert to lowercase
+  print("Lowercase: ${name.trim().toLowerCase()}");
+
+  // 8. Check whether name contains a word
+  print("Contains ORGAN: ${name.contains("ORGAN")}");
+}
+
+Explanation of mathematical functions
+Function	Meaning	Example
+Square root: sqrt()	Finds the square root	sqrt(144) = 12
+Power: pow()	Calculates power	pow(2, 4) = 16
+Maximum: max()	Finds the biggest number	max(20, 10) = 20
+Minimum: min()	Finds the smallest number	min(20, 10) = 10
+Important: Add this line before main():
+import 'dart:math';
+It allows us to use mathematical functions.
+Same string method:
+Method	Meaning
+trim()	Removes spaces at the beginning and end
+toUpperCase()	Changes text into capital letters
+toLowerCase()	Changes text into small letters
+contains()	Checks if text contains a word
+Example
+String name = "   IRADUKUNDA isaac   ";
+
+print(name.trim());
+Output:
+IRADUKUNDA isaac
+summary – remember:
+•	sqrt() = Finds square root.
+•	pow() = Calculates power.
+•	max() = Finds the biggest number.
+•	min() = Finds the smallest number.
+•	trim() = Removes extra spaces.
+•	toUpperCase() = Capital letters.
+•	toLowerCase() = Small letters.
+•	contains() = Checks for a word.
+Remember: Mathematical functions calculate numbers, while String methods work with text.
+Q25: Student Management System Using Functions
+What is required?
+Create a student management program using five functions:
+1.	studentInfo()
+2.	calculateTotal()
+3.	calculateAverage()
+4.	isPassed()
+5.	multiply()
+Dart Program
+
+void studentInfo({required String name, required int age}) {
+  print("Student Name: $name");
+  print("Student Age: $age");
+}
+
+// Calculate total marks
+int calculateTotal(int mark1, int mark2, int mark3) {
+  return mark1 + mark2 + mark3;
+}
+
+// Calculate average marks
+double calculateAverage(int total) {
+  return total / 3;
+}
+
+// Check whether student passed
+bool isPassed(double average) {
+  return average >= 50;
+}
+
+// Arrow function
+int multiply(int a, int b) => a * b;
+
+void main() {
+
+  // Calling studentInfo()
+  studentInfo(name: "isaac", age: 20);
+
+  // Calling calculateTotal()
+  int total = calculateTotal(80, 70, 90);
+  print("Total Marks: $total");
+
+  // Calling calculateAverage()
+  double average = calculateAverage(total);
+  print("Average Marks: $average");
+
+  // Calling isPassed()
+  print("Passed: ${isPassed(average)}");
+
+  // Calling multiply()
+  print("Multiplication: ${multiply(5, 4)}");
+}
+Explanation
+1. studentInfo()
+void studentInfo({required String name, required int age}) {
+  print("Student Name: $name");
+}
+•	void – The function does not return a value.
+•	studentInfo – The function name.
+•	name and age – Named parameters.
+•	required – Means the parameters must be provided.
+2. calculateTotal()
+int calculateTotal(int mark1, int mark2, int mark3) {
+  return mark1 + mark2 + mark3;
+}
+It adds three marks and returns the total.
+3. calculateAverage()
+double calculateAverage(int total) {
+  return total / 3;
+}
+It divides the total marks by 3 to get the average.
+4. isPassed()
+bool isPassed(double average) {
+  return average >= 50;
+}
+It checks if the average is 50 or above.
+•	true = Passed.
+•	false = Failed.
+5. Arrow function
+int multiply(int a, int b) => a * b;
+It multiplies two numbers using the short arrow syntax =>.
+Output
+Student Name: isaac
+Student Age: 20
+Total Marks: 240
+Average Marks: 80.0
+Passed: true
+Multiplication: 20
+summary  to remember
+Concept	Meaning
+Function	-Reusable block of code
+void	-Returns nothing
+return	-Sends a value back
+int	-Whole number
+double	-Decimal number
+bool	-true or false
+required	-Parameter must be provided
+=>	-Short way to write a function
+Remember: Functions help us reuse code without writing the same instructions again.
+Q26: Creating Classes and Objects
+What is required?
+Create a class called Student with three properties:
+•	name
+•	age
+•	course
+Then create three different student objects.
+Dart Program
+
+class Student {
+
+  // Properties
+  String name;
+  int age;
+  String course;
+
+  // Constructor
+  Student(this.name, this.age, this.course);
+
+  // Method
+  void displayDetails() {
+    print("Name: $name");
+    print("Age: $age");
+    print("Course: $course");
+  }
+}
+
+void main() {
+
+  // Creating three objects
+  Student student1 = Student("isaac", 20, "Software Development");
+
+  Student student2 = Student("sharifu", 21, "Networking");
+
+  Student student3 = Student("amuza", 19, "Graphic Design");
+
+  // Accessing properties using dot operator
+  print(student1.name);
+  print(student2.age);
+  print(student3.course);
+
+  // Calling methods using dot operator
+  student1.displayDetails();
+  student2.displayDetails();
+  student3.displayDetails();
+}
+Explanation:
+1. Class
+class Student {
+A class is a blueprint used to create objects.
+2. Properties
+String name;
+int age;
+String course;
+These are the data stored inside the Student class.
+3. Constructor
+Student(this.name, this.age, this.course);
+A constructor gives values to an object when it is created.
+4. Method
+void displayDetails() {
+  print("Name: $name");
+}
+A method is a function inside a class.
+5. Objects
+Student student1 = Student("isaac", 20, "Software Development");
+An object is created from a class.
+6. Dot operator
+student1.name;
+student1.displayDetails();
+The dot operator (.) is used to access the properties and methods of an object.
+Summary to remember
+Concept	Meaning
+Class	-Blueprint for creating objects
+Object	-An instance of a class
+Properties	-Data inside a class
+Method	-Function inside a class
+Constructor	-Gives values to an object
+Dot operator .	-Accesses properties and methods
+Remember: A class is a blueprint, and an object is created from that blueprint.
+Q27: Constructors in Dart
+What is required?
+Create a class called Employee with four properties:
+•	name
+•	employeeId
+•	department
+•	salary
+Use a parameterized constructor and a named constructor.
+Dart Program
+
+class Employee {
+
+  // Properties
+  String name;
+  int employeeId;
+  String department;
+  double salary;
+
+  // Parameterized constructor
+  Employee(this.name, this.employeeId, this.department, this.salary);
+
+  // Named constructor
+  Employee.intern()
+      : name = "Isaac",
+        employeeId = 0,
+        department = "Training",
+        salary = 0.0;
+
+  // Method
+  void displayEmployee() {
+    print("Name: $name");
+    print("Employee ID: $employeeId");
+    print("Department: $department");
+    print("Salary: $salary");
+    print("-------------------");
+  }
+}
+
+void main() {
+
+  // Creating employee objects
+  Employee employee1 = Employee("isaac", 101, "IT", 500000);
+
+  Employee employee2 = Employee("sharifu", 102, "Finance", 400000);
+
+  // Using named constructor
+  Employee employee3 = Employee.intern();
+
+  // Display employee information
+  employee1.displayEmployee();
+  employee2.displayEmployee();
+  employee3.displayEmployee();
+}
+Explanation:
+1. Properties
+String name;
+int employeeId;
+String department;
+double salary;
+These variables store employee information.
+2. Parameterized constructor
+Employee(this.name, this.employeeId, this.department, this.salary);
+This constructor receives values when we create an object.
+Example:
+Employee employee1 = Employee("ORGAN", 101, "IT", 500000);
+3. this keyword
+this refers to the current object.
+Example:
+Employee(this.name);
+It assigns the given name to the object's name property.
+4. Named constructor
+Employee.intern()
+    : name = "Intern",
+      employeeId = 0,
+      department = "Training",
+      salary = 0.0;
+A named constructor has its own name and can give default values to an object.
+5. Calling named constructor
+Employee employee3 = Employee.intern();
+This creates an intern employee using the default values.
+summary to remember
+Concept	Meaning
+Constructor	-Initializes an object
+Parameterized constructor	-Receives values
+this	-Refers to the current object
+Named constructor	-Constructor with a special name
+displayEmployee()	-Displays employee information
+Remember:
+•	Employee() = Normal constructor.
+•	Employee.intern() = Named constructor.
+•	this = Refers to the current object's properties.
+Q28: Encapsulation in a Banking System
+What is required?
+Create a banking program that protects account balance from unauthorized changes.
+We will use:
+•	Class
+•	Private variable
+•	Getter
+•	Setter
+•	Deposit method
+•	Withdraw method
+Dart Program
+
+class BankAccount {
+
+  // Private variable
+  double _balance = 0;
+
+  // Getter
+  double get balance {
+    return _balance;
+  }
+
+  // Setter
+  set balance(double amount) {
+    if (amount > 0) {
+      _balance = amount;
+    } else {
+      print("Invalid balance!");
+    }
+  }
+
+  // Deposit method
+  void deposit(double amount) {
+    if (amount > 0) {
+      _balance += amount;
+      print("Deposit successful!");
+    } else {
+      print("Invalid deposit amount!");
+    }
+  }
+
+  // Withdraw method
+  void withdraw(double amount) {
+    if (amount > 0 && amount <= _balance) {
+      _balance -= amount;
+      print("Withdrawal successful!");
+    } else {
+      print("Insufficient balance or invalid amount!");
+    }
+  }
+}
+
+void main() {
+
+  // Creating object
+  BankAccount account = BankAccount();
+
+  // Setting initial balance
+  account.balance = 1000;
+
+  // Deposit money
+  account.deposit(500);
+
+  // Withdraw money
+  account.withdraw(200);
+
+  // Display account balance
+  print("Current Balance: ${account.balance}");
+}
+Output:
+Deposit successful!
+Withdrawal successful!
+Current Balance: 1300.0
+Explanation:
+1. Private variable
+double _balance = 0;
+•	_balance is a private variable.
+•	The underscore (_) makes it private within its Dart library.
+•	It helps protect data from direct changes.
+2. Getter
+double get balance {
+  return _balance;
+}
+A getter is used to read the value of a private variable.
+Example:
+print(account.balance);
+3. Setter
+set balance(double amount) {
+  if (amount > 0) {
+    _balance = amount;
+  }
+}
+A setter is used to change a variable's value.
+In this example, it only accepts positive values.
+Example:
+account.balance = 1000;
+4. Deposit
+void deposit(double amount) {
+  if (amount > 0) {
+    _balance += amount;
+  }
+}
+It adds money to the account balance.
+5. Withdraw
+void withdraw(double amount) {
+  if (amount > 0 && amount <= _balance) {
+    _balance -= amount;
+  }
+}
+It removes money from the account.
+It does not allow the user to withdraw more money than the available balance.
+6. Display balance
+print(account.balance);
+It uses the getter to read and display the account balance.
+Summary – Remember
+Concept	Meaning
+Encapsulation	-Protecting data
+Private variable	-Variable starting with _
+Getter	-Reads private data
+Setter	-Changes private data
+Deposit	-Adds money
+Withdraw	-Removes money
++=	-Adds a value
+-=	-Subtracts a value
+
